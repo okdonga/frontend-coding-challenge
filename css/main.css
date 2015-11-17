@@ -92,6 +92,13 @@ h3, h5, p, ul, ol {
 }
 
 /*
+    MARGIN
+*/
+.m-r-s { margin-right: 10px; }
+.m-l-s { margin-left: 10px; }
+.m-l-l { margin-left: 40%; }
+.m-t-s { margin-top: 5px; }
+/*
     PADDING
 */
 .p-xs { padding: 0.4em; }
@@ -108,7 +115,7 @@ h3, h5, p, ul, ol {
 .bdrds-lg { border-radius: 16px; }
 
 .bds-1 { border-width: 1px; }
-.bds-solid { border-style: solid; }
+.bds-slid { border-style: solid; }
 .bdc-fog { border-color: blue; }
 
 .tt--logo {

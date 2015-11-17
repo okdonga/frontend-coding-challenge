@@ -15,7 +15,7 @@
   <body>
     <div class="debug">
       <header class="container clearfix p-sm debug">
-        <div class="layout"><button class="tt-logo fl-r debug">toggle</button></div>
+        <div class="layout"><button class="tt-logo fl-r bds-1 bds-slid p-xs debug">toggle</button></div>
       </header>
       <main role="main" class="container row debug">
         <div class="row">
@@ -92,7 +92,6 @@
             <ul>- [공지] 쿠팡정보 보안 국제 표준 (150 27001)입증 취득</ul>
           </div>
         </div>
-        <div class="p-sm debug">here goes the tabs</div>
         <nav class="row p-sm">
           <ul class="list-n clearfix gutters-t gutters-d debug">
             <li class="fl-l p-sm bgc-cool debug"><a href="menu-1" class="menu-1-tab white">Menu 1</a></li>
@@ -169,60 +168,58 @@
                 <form id="id" class="p-sm debug" method="post" action="#" onsubmit="return checkForm(this)">
                   <div class="fl-l span-6-t p-sb">
                     <label for="id" class="col span-5-t">ID</label>
-                    <input type="text" name="id" required pattern="\w+" class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug" onchange="form.id.pattern = this.value;">
+                    <input type="text" name="id" required pattern="\w+" class="bds-1 bds-slid bdc-fog p-xs bdrds-lg debug" onchange="form.id.pattern = this.value;">
                   </div>
                   <div class="fl-l span-6-t p-sb clearfix">
                     <label for="email" class="col span-5-t">Email</label>
-                    <input type="email" name="email" required class="span-5-t bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug">
+                    <input type="email" name="email" required class="span-5-t bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
                   </div>
                   <div class="fl-l span-6-t p-sb">
                     <label for="password" class="col span-5-t">Password</label>
-                    <input type="password" name="password" required  class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug">
+                    <input type="password" name="password" required  class="bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
                   </div>
                   <div class="fl-l span-6-t p-sb clearfix">
                     <label for="password" class="col span-5-t">Password Confirmation</label>
-                    <input type="password" name="password" required  class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug">
+                    <input type="password" name="password" required  class="span-5-t bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
                   </div>
                   <div class="fl-l span-6-t p-sb">
                     <label for="name" class="col span-5-t">Name</label>
-                    <input type="text" name="name" required pattern="\w+" class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug">
+                    <input type="text" name="name" required pattern="\w+" class="bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
                   </div>
                   <div class="fl-l span-6-t p-sb clearfix">
                     <label for="phone" class="col span-5-t">Phone Number</label>
-                    <select class="fl-l p-xs clearfix debug">
+                    <select class="fl-l p-xs clearfix m-t-s debug">
                       <option value="010">010</option>
                       <option value="011">011</option>
                       <option value="016">016</option>
                       <option value="000">000</option>
                     </select>
                     <p class="fl-l p-xs debug">-</p>
-                    <input type="mid-tel" name="phone" required pattern="\d{4}\d{4}" class="fl-l bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg span-2-t debug">
+                    <input type="mid-tel" name="phone" required pattern="\d{4}\d{4}" class="fl-l bds-1 bds-slid bdc-fog p-xs bdrds-lg span-2-t debug">
                     <p class="fl-l p-xs debug">-</p>
-                    <input type="fin-tel" name="phone" required pattern="\d{4}\d{4}" class="fl-l bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg span-2-t debug">
+                    <input type="fin-tel" name="phone" required pattern="\d{4}\d{4}" class="fl-l bds-1 bds-slid bdc-fog p-xs bdrds-lg span-2-t debug">
                   </div>
                   <div class="fl-l span-6-t p-sb">
-                    <label for="email" class="col span-5-t">Sex</label>
+                    <label for="email" class="col span-5-t">Gender</label>
 
-                    <input type="checkbox" name="female" value="female" required  class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug" class="fl-l">Female
+                    <input type="checkbox" name="female" value="female" required  class="bds-1 bds-slid bdc-fog p-sm bdrds-lg m-r-s debug">Female
 
-                    <input type="checkbox" name="male" value="male" required  class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug" class="fl-l">Male
+                    <input type="checkbox" name="male" value="male" required  class="bds-1 bds-slid bdc-fog p-xs bdrds-lg m-l-s m-r-s debug">Male
                   </div>
                   <div class="fl-l span-6-t p-sb clearfix">
                     <label for="agreement" class="col span-5-t">Terms and Conditions</label>
-
-
-                    <input type="checkbox" name="terms" value="agree" required  class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug">Agree
-
-                    <input type="checkbox" name="terms" value="disagree" required  class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug">Not Agree
-
-
+                    <input type="checkbox" name="terms" value="agree" required  class="bds-1 bds-slid bdc-fog p-xs bdrds-lg m-r-s debug">Agree
+                    <input type="checkbox" name="terms" value="disagree" required  class="bds-1 bds-slid bdc-fog p-xs bdrds-lg  m-l-s m-r-s debug">Not Agree
                   </div>
                   <div class="col p-sm">
-                    <input type="submit" value="가입완료" class="">
+                    <input type="submit" value="가입완료" class="m-l-l debug">
                   </div>
                 </form>
               </li>
             </ul>
+          </div>
+          <div class="menu-5 display-n">
+            <div class="col span-12-t p-xxl"><h1>Menu 5 Testing...</h1></div>
           </div>
         </section>
       </main>
