@@ -56,7 +56,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-ul, ol {
+h3, h5, p, ul, ol {
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     -webkit-margin-start: 0px;
@@ -80,10 +80,12 @@ EXAMPLES OF CLASS NAME
 */
 
 .p-xs { padding: 0.4em; }
-.p-sm { padding: 0.6em; }
+.p-sm { padding: 1em; }
 .p-xxl { padding: 10em; }
 .p-r { padding-right: 12px; }
 .p-b { padding-bottom: 12px; }
+
+
 
 .bgc-cool { background-color: blue; }
 
@@ -117,7 +119,10 @@ EXAMPLES OF CLASS NAME
     display: none;
 }
 
-
+.img-xl {
+    width: 300px;
+    height: 86px;
+}
 
 .img-l {
     width: 304px;
@@ -129,9 +134,24 @@ EXAMPLES OF CLASS NAME
     height: 150px;
 }
 
+.img-sm {
+    width: 117px;
+    height: 74px;
+}
+
 .img-s {
     width: 160px;
     height: 150px;
+}
+
+.img-xs {
+    width: 130px;
+    height: 120px;
+}
+
+.img-xxs {
+    width: 92px;
+    height: 82px;
 }
 
 .w-fixed {

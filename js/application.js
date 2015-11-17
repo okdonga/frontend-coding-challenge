@@ -57,7 +57,7 @@ $(document).ready(function() {
 
 
   // ** MENU 3 ** // make this into a function
-  //
+
   // hide everything
   // function displayThree() {
   //   var threadTotal = $('.deck>ul>li');
