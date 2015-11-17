@@ -65,10 +65,13 @@ h3, h5, p, ul, ol {
 }
 
 
+body {
+    font-family: "돋움", "Dotum", tahoma;
+}
+
 /*
     COLOR
 */
-
 .debug {
     border: 1px solid red;
 }
@@ -102,6 +105,7 @@ h3, h5, p, ul, ol {
     PADDING
 */
 .p-xs { padding: 0.4em; }
+.p-s { padding: .8em; }
 .p-sm { padding: 1em; }
 .p-xxl { padding: 10em; }
 .p-r { padding-right: 12px; }

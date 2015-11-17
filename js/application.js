@@ -119,7 +119,12 @@ $(document).ready(function() {
   });
 
   $('.arrow-r').click(arrowRightClick);
+
+  // MENU 4 : form validation
+  $('#submit').click(genderValidation);
+    // agmtValidation;
 })
+
 
 var arrowRightClick = function(event) {
 
@@ -163,3 +168,18 @@ var displayThree = function() {
   }
 }
 
+var genderValidation = function(event) {
+  var isChecked = $("#gender>input[type=checkbox]:checked").length;
+  if (!isChecked) {
+    alert('Please select your gender.');
+    return false
+  }
+}
+
+var agmtValidation = function(event) {
+  var isChecked = $("#agmt>input[type=checkbox]:checked").length;
+  if (!isChecked) {
+    alert('Please indicate that you accept the Terms and Conditions.');
+    return false
+  }
+}

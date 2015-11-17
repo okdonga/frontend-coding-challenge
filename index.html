@@ -1,17 +1,17 @@
 <!doctype html>
 <html class="no-js" lang="kr">
   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title></title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="css/normalize.min.css">
-      <link rel="stylesheet" href="css/trg.css">
-      <link rel="stylesheet" href="css/main.css">
-
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/trg.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
+
   <body>
     <div class="debug">
       <header class="container clearfix p-sm debug">
@@ -33,20 +33,19 @@
               </ul>
               <div class="list-n clearfix debug">
                 <ul class="fl-l list-n clearfix gutters-t gutters-d debug">
-                  <li class="fl-l p-sm debug"><img src="img/filler.png" class="img-sm">
+                  <li class="fl-l p-s debug"><img src="img/filler.png" class="img-sm">
                     <p>[필리핀] 세부 자유..</p>
                     <p class="blue">399,000원</p>
                   </li>
-
-                  <li class="fl-l p-sm debug"><img src="img/filler.png" class="img-sm">
+                  <li class="fl-l p-s debug"><img src="img/filler.png" class="img-sm">
                     <p>[필리핀] 세부 자유..</p>
                     <p class="blue">399,000원</p>
                   </li>
-                  <li class="fl-l p-sm debug"><img src="img/filler.png" class="img-sm">
+                  <li class="fl-l p-s debug"><img src="img/filler.png" class="img-sm">
                     <p>[필리핀] 세부 자유..</p>
                     <p class="blue">399,000원</p>
                   </li>
-                  <li class="fl-l p-sm debug"><img src="img/filler.png" class="img-sm">
+                  <li class="fl-l p-s debug"><img src="img/filler.png" class="img-sm">
                     <p>[필리핀] 세부 자유..</p>
                     <p class="blue">399,000원</p>
                   </li>
@@ -124,7 +123,6 @@
 
           <div class="menu-2 display-n">
             <div class="deck-top col p-b"><img src="http://www.shindigs.com.au/assets/full/6674.jpg" class="img-xxl col span-6-t debug"></div>
-
             <div class="fl-l arrow-l debug"><img src="img/arrow-left.jpeg" class="img-xxs p-sm debug"></div>
             <div class="deck">
               <ul class="fl-l list-n clearfix debug">
@@ -165,26 +163,28 @@
           <div class="menu-4 display-n">
             <ul class="col span-12-t list-n clearfix gutters-t gutters-d debug ">
               <li class="fl-l col span-12-t debug">
-                <form id="id" class="p-sm debug" method="post" action="#" onsubmit="return checkForm(this)">
+                <form id="id" class="p-sm debug" method="post" action="#">
                   <div class="fl-l span-6-t p-sb">
                     <label for="id" class="col span-5-t">ID</label>
-                    <input type="text" name="id" required pattern="\w+" class="bds-1 bds-slid bdc-fog p-xs bdrds-lg debug" onchange="form.id.pattern = this.value;">
+                    <input type="text" name="id" required pattern="\w+" title="letter or number or underscore allowed" class="bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
                   </div>
                   <div class="fl-l span-6-t p-sb clearfix">
-                    <label for="email" class="col span-5-t">Email</label>
-                    <input type="email" name="email" required class="span-5-t bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
+                    <label for="email" class="col span-4-t">Email</label>
+                    <input type="text" name="email" required pattern="\w+" title="letter or number or underscore allowed"  class="span-3-t fl-l m-r-s bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
+                    <p class="fl-l m-r-s">@</p>
+                    <input type="text" name="email" required pattern="\w+" title="letter or number or underscore allowed"  class="span-3-t bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
                   </div>
                   <div class="fl-l span-6-t p-sb">
                     <label for="password" class="col span-5-t">Password</label>
-                    <input type="password" name="password" required  class="bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
+                    <input type="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="must contain at least 6 characters, a digit, a lowercase letter, a uppercase letter" class="bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
                   </div>
                   <div class="fl-l span-6-t p-sb clearfix">
                     <label for="password" class="col span-5-t">Password Confirmation</label>
-                    <input type="password" name="password" required  class="span-5-t bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
+                    <input type="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="must contain at least 6 characters, a digit, a lowercase letter, a uppercase letter" class="span-5-t bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
                   </div>
                   <div class="fl-l span-6-t p-sb">
                     <label for="name" class="col span-5-t">Name</label>
-                    <input type="text" name="name" required pattern="\w+" class="bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
+                    <input type="text" name="name" required pattern="\w+\s\w+" title="firstname lastname" class="bds-1 bds-slid bdc-fog p-xs bdrds-lg debug">
                   </div>
                   <div class="fl-l span-6-t p-sb clearfix">
                     <label for="phone" class="col span-5-t">Phone Number</label>
@@ -195,24 +195,22 @@
                       <option value="000">000</option>
                     </select>
                     <p class="fl-l p-xs debug">-</p>
-                    <input type="mid-tel" name="phone" required pattern="\d{4}\d{4}" class="fl-l bds-1 bds-slid bdc-fog p-xs bdrds-lg span-2-t debug">
+                    <input type="mid-tel" name="phone" required pattern="\d{4}" title="numbers only" class="fl-l bds-1 bds-slid bdc-fog p-xs bdrds-lg span-2-t debug">
                     <p class="fl-l p-xs debug">-</p>
-                    <input type="fin-tel" name="phone" required pattern="\d{4}\d{4}" class="fl-l bds-1 bds-slid bdc-fog p-xs bdrds-lg span-2-t debug">
+                    <input type="fin-tel" name="phone" required pattern="\d{4}" title="numbers only" class="fl-l bds-1 bds-slid bdc-fog p-xs bdrds-lg span-2-t debug">
                   </div>
-                  <div class="fl-l span-6-t p-sb">
-                    <label for="email" class="col span-5-t">Gender</label>
-
-                    <input type="checkbox" name="female" value="female" required  class="bds-1 bds-slid bdc-fog p-sm bdrds-lg m-r-s debug">Female
-
-                    <input type="checkbox" name="male" value="male" required  class="bds-1 bds-slid bdc-fog p-xs bdrds-lg m-l-s m-r-s debug">Male
+                  <div id="gender" class="fl-l span-6-t p-sb" >
+                    <label for="gender" class="col span-5-t">Gender</label>
+                    <input type="checkbox" name="female" value="female" class="bds-1 bds-slid bdc-fog p-sm bdrds-lg m-r-s debug">Female
+                    <input type="checkbox" name="male" value="male" class="bds-1 bds-slid bdc-fog p-xs bdrds-lg m-l-s m-r-s debug">Male
                   </div>
-                  <div class="fl-l span-6-t p-sb clearfix">
+                  <div id="agmt" class="fl-l span-6-t p-sb clearfix" >
                     <label for="agreement" class="col span-5-t">Terms and Conditions</label>
-                    <input type="checkbox" name="terms" value="agree" required  class="bds-1 bds-slid bdc-fog p-xs bdrds-lg m-r-s debug">Agree
-                    <input type="checkbox" name="terms" value="disagree" required  class="bds-1 bds-slid bdc-fog p-xs bdrds-lg  m-l-s m-r-s debug">Not Agree
+                    <input type="checkbox" name="terms" value="agree" required class="bds-1 bds-slid bdc-fog p-xs bdrds-lg m-r-s debug">Agree
+                    <input type="checkbox" name="terms" value="disagree" class="bds-1 bds-slid bdc-fog p-xs bdrds-lg  m-l-s m-r-s debug">Not Agree
                   </div>
                   <div class="col p-sm">
-                    <input type="submit" value="가입완료" class="m-l-l debug">
+                    <input type="submit" value="가입완료" id="submit" class="m-l-l debug">
                   </div>
                 </form>
               </li>
@@ -224,7 +222,6 @@
         </section>
       </main>
     </div>
-
   <script src="js/lib/jquery-1.10.js"></script>
   <script type="text/javascript" src="js/application.js"></script>
   </body>
