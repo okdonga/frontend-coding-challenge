@@ -9,7 +9,7 @@ $(document).ready(function() {
   ($("." + contentName)).show();
 
   // change page layout
-  $('button').click(function() {
+  $('.layout').click(function() {
     // replace first with fourth
     // function ab() {
       // console.log("running")
@@ -18,10 +18,26 @@ $(document).ready(function() {
       var third = $('.third').clone();
       var fourth = $('.fourth').clone();
 
+      //class change
       $('.first').replaceWith(fourth);
+      var revertClassName = $('.fourth').first().attr('class').replace('fourth', 'first');
+      $('.fourth').first().attr('class', revertClassName);
+
+      // class change
+      $('.second').replaceWith(third);
+      var revertClassName = $('.third').first().attr('class').replace('third', 'second');
+      $('.third').first().attr('class', revertClassName);
+
+      //class change
       $('.third').replaceWith(second);
-      $('.second').first().replaceWith(third);
-      $('.fourth').last().replaceWith(first);
+      var revertClassName = $('.second').last().attr('class').replace('second', 'third');
+      $('.second').last().attr('class', revertClassName);
+
+      //class change
+      $('.fourth').replaceWith(first);
+      var revertClassName = $('.first').last().attr('class').replace('first', 'fourth');
+      $('.first').last().attr('class', revertClassName);
+      //class change
       // $('.second').removeClass('span-4-t').addClass('span-8-t');
     // }
     // ab().toggleClass
@@ -32,8 +48,7 @@ $(document).ready(function() {
     event.preventDefault();
     // displayThree();
     $('section>div').css('display', 'none');
-    $("." + className).parent().removeClass('selected');
-
+    $('nav>ul>li').removeClass('selected');
     var selectedContent = $(this).attr('href');
     var selectedClassName = selectedContent + '-tab'
     $("." + selectedClassName).parent().addClass("selected");
@@ -44,32 +59,32 @@ $(document).ready(function() {
   // ** MENU 3 ** // make this into a function
   //
   // hide everything
-  function displayThree() {
-    var threadTotal = $('.deck>ul>li');
-    threadTotal.css('display', 'none');
-    console.log(threadTotal);
-    var threadOne = threadTotal.slice(0,3);
-    var threadTwo = threadTotal.slice(3,6);
-    var threadThree = threadTotal.slice(5,8);
-    // show always only three by default
+  // function displayThree() {
+  //   var threadTotal = $('.deck>ul>li');
+  //   threadTotal.css('display', 'none');
+  //   console.log(threadTotal);
+  //   var threadOne = threadTotal.slice(0,3);
+  //   var threadTwo = threadTotal.slice(3,6);
+  //   var threadThree = threadTotal.slice(5,8);
+  //   // show always only three by default
 
-    var currentImg = $('.deck-top').children().prop('src');
-    var currentDeck = $('.deck').find('img[src$="' + currentImg + '"]').parent();
-    // console.log(currentDeck)
-    // console.log(threadTotal.indexOf(currentDeck));
+  //   var currentImg = $('.deck-top').children().prop('src');
+  //   var currentDeck = $('.deck').find('img[src$="' + currentImg + '"]').parent();
+  //   // console.log(currentDeck)
+  //   // console.log(threadTotal.indexOf(currentDeck));
 
-    // if (threadOne.includes(currentDeck)) { alert('true')}
-    // if currentImg is included in the thread, display the thread
+  //   // if (threadOne.includes(currentDeck)) { alert('true')}
+  //   // if currentImg is included in the thread, display the thread
 
 
-    // var currentDeck = $('.deck').find('img[src$="' + currentImg + '"]').parent();
-    // var leftDeck = currentDeck.prev();
-    // console.log(leftDeck);
-    // var rightDeck = currentDeck.next();
-    // $(currentDeck).show();
-    // $(leftDeck).show();
-    // $(rightDeck).show();
-  }
+  //   // var currentDeck = $('.deck').find('img[src$="' + currentImg + '"]').parent();
+  //   // var leftDeck = currentDeck.prev();
+  //   // console.log(leftDeck);
+  //   // var rightDeck = currentDeck.next();
+  //   // $(currentDeck).show();
+  //   // $(leftDeck).show();
+  //   // $(rightDeck).show();
+  // }
 
 
   // on click, display enlarged image
@@ -109,8 +124,13 @@ $(document).ready(function() {
     }
   });
 
-  $('.arrow-r').click(function() {
+  $('.arrow-r').click(arrowRightClick);
+})
+
+var arrowRightClick = function(event) {
     // displayThree();
+    // var target = event.target;
+    // if target.parent().attr('class') ==
     $('.arrow-l').show();
     var currentImg = $('.deck-top').children().prop('src');
     var prevDeck = $('.deck').find('img[src$="' + currentImg + '"]').parent().next();
@@ -120,6 +140,10 @@ $(document).ready(function() {
     if (currentImg == $('.deck>ul>li:nth-child(7)').children().prop('src')) {
       $('.arrow-r').hide();
     }
-  });
-})
+}
 
+// var checkForm = function(form) {
+//   if (form.username.value == " ") {
+//     alert
+//   }
+// }
