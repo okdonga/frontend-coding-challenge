@@ -79,9 +79,11 @@ EXAMPLES OF CLASS NAME
 .p-xxl
 */
 
-.p-xs { padding: 0.4em;}
-.p-sm { padding: 0.6em;}
+.p-xs { padding: 0.4em; }
+.p-sm { padding: 0.6em; }
 .p-xxl { padding: 10em; }
+.p-r { padding-right: 12px; }
+.p-b { padding-bottom: 12px; }
 
 .bgc-cool { background-color: blue; }
 
@@ -107,13 +109,19 @@ EXAMPLES OF CLASS NAME
     background: white;
 }
 
+.current {
+    background-color: blue;
+}
+
 .display-n {
     display: none;
 }
 
-.img-s {
-    width: 160px;
-    height: 150px;
+
+
+.img-l {
+    width: 304px;
+    height: 312px;
 }
 
 .img-m {
@@ -121,11 +129,21 @@ EXAMPLES OF CLASS NAME
     height: 150px;
 }
 
-.img-l {
-    width: 304px;
-    height: 312px;
+.img-s {
+    width: 160px;
+    height: 150px;
 }
 
+.w-fixed {
+    width: 516px;
+}
+
+.ps-r { position: relative; }
+.ps-a { position: absolute; }
+
+.left-s { left: 100px; }
+.top-h { top: 200px;}
+.top-l { top: 300px;}
 
 
 /* ==========================================================================

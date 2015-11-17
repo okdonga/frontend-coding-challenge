@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="kr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -25,7 +25,7 @@
             <header class="container clearfix p-sm debug">
                 <!-- if no content, collapse by default -->
                 <!-- srcset is awesome -->
-                <div><button class="tt-logo fl-r debug">레이아웃변경</button></div>
+                <div class="layout"><button class="tt-logo fl-r debug">toggle</button></div>
 
                 <ul class="fl-r list-n clearfix debug">
                     <li class="fl-l debug">
@@ -39,13 +39,13 @@
             </header>
 
 
-            <div class="p-xxl bgc-cool debug">
+           <!--  <div class="p-xxl bgc-cool debug">
                 big background image
-            </div>
+            </div> -->
             <!-- role => attribute that defines the role of the tag  -->
             <main role="main" class="container row debug">
                 <div class="row">
-                    <div class="col span-8-t debug">
+                    <div class="col span-8-t first debug">
                         <li>TITLE 01</li><hr>
                         <div class="container row">main content</div>
                         <ul>
@@ -55,17 +55,17 @@
                             <li>4</li>
                         </ul>
                     </div>
-                    <div class="col span-4-t debug">
+                    <div class="col span-4-t second debug">
                         <li>TITLE 02</li>
                         there images stacked on top
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col span-4-t debug">
+                    <div class="col span-4-t third debug">
                         <li>TITLE 03</li>
                         3 by 3 images
                     </div>
-                    <div class="col span-8-t debug">
+                    <div class="col span-8-t fourth debug">
                         <li>TITLE 04</li>
                         brzillion lis
                     </div>
@@ -82,27 +82,77 @@
                 </nav>
 
                 <section class="bdc-fog">
-                    <div class="menu-1  display-n">
-                        <div class="img-s"><img src="https://g.twimg.com/Twitter_logo_blue.png"></div>
-                        <div class="img-s"><img src="https://g.twimg.com/Twitter_logo_blue.png"></div>
-                        <div class="img-s"><img src="https://g.twimg.com/Twitter_logo_blue.png"></div>
-                        <div class="img-s"><img src="https://g.twimg.com/Twitter_logo_blue.png"></div>
-                        <div class="img-s"><img src="https://g.twimg.com/Twitter_logo_blue.png"></div>
-                        <div class="img-s"><img src="https://g.twimg.com/Twitter_logo_blue.png"></div>
+                    <div class="menu-1 row display-n clearfix">
+                      <div class="fl-l w-fixed debug">
+                        <ul class="fl-l list-n clearfix">
+                          <li class="fl-l p-r p-b img-s"><img src="https://g.twimg.com/Twitter_logo_blue.png" class="img-s debug"></li>
+                          <li class="fl-l p-r p-b img-s"><img src="https://g.twimg.com/Twitter_logo_blue.png" class="img-s debug"></li>
+                          <li class="fl-l p-r p-b img-s"><img src="https://g.twimg.com/Twitter_logo_blue.png" class="img-s debug"></li>
+                        </ul>
+                        <ul class="fl-l list-n clearfix">
+                          <li class="fl-l p-r img-m"><img src="https://g.twimg.com/Twitter_logo_blue.png" class="img-m debug"></li>
+                          <li class="fl-l p-r img-s"><img src="https://g.twimg.com/Twitter_logo_blue.png" class="img-s debug"></li>
+                        </ul>
+                      </div>
+                      <div class="fl-l debug">
+                        <ul class="fl-l list-n clearfix">
+                          <li class="fl-l list-n clearfix p-fixed img-l"><img src="https://g.twimg.com/Twitter_logo_blue.png" class="img-l debug"></li>
+                        </ul>
+                      </div>
                     </div>
+
                     <div class="menu-2 display-n">
-                        <h1>this is menu 2<h1>
-                        <a href="">block</a>
-                        <a href="">reddit</a>
+                        <h1>this is menu 3<h1>
+                          <div class="deck-top"><img src="http://www.shindigs.com.au/assets/full/6674.jpg" class="img-l debug"></div>
+
+                          <div class="fl-l arrow-l debug"><img src="img/arrow-left.jpeg" class="img-s debug"></div>
+                          <div class="deck">
+                            <ul class="fl-l list-n clearfix debug">
+                              <li class="fl-l p-sm debug"><img src="https://sparklyshinyblog.files.wordpress.com/2013/06/f5225-number1shapedpinata.jpg"  class="img-s debug"></li>
+                              <li class="fl-l p-sm debug"><img src="http://www.ghi.ch/sites/default/files/field/image/number-2-pinata.jpg" class="img-s debug"></li>
+                              <li class="fl-l p-sm debug"><img src="https://www.discountpartywarehouse.com.au/images/Number-3-Pinata.jpg" class="img-s debug"></li>
+                              <li class="fl-l p-sm debug"><img src="http://www.shindigs.com.au/assets/full/6674.jpg" class="img-s debug"></li>
+                              <li class="fl-l p-sm debug"><img src="http://ll-us-i5.wal.co/dfw/dce07b8c-4170/k2-_30c0f4c6-4f47-4c02-82cb-462d29e2c275.v1.jpg-426ad321c24258646dc376bfc7f9885928c9b770-optim-144x144.jpg?odnWidth=144&odnHeight=144" class="img-s debug"></li>
+                              <li class="fl-l p-sm debug"><img src="http://www.binbin.net/photos/generic/pin/pinata-number-6.jpg" class="img-s debug"></li>
+                              <li class="fl-l p-sm debug"><img src="http://www.socialtechpop.com/wp-content/uploads/2012/03/wpid-number71.jpg" class="img-s debug"></li>
+                              <li class="fl-l p-sm debug"><img src="http://www.partylanes.co.uk/media/catalog/category/A-PF968.jpg" class="img-s debug"></li>
+                            </ul>
+                          </div>
+                          <div class="fl-l arrow-r debug"><img src="img/arrow-right.jpeg" class="img-s debug"></div>
+
                     </div>
+
+                    <div class="menu-3 display-n ps-r debug">
+                        <h1>this is menu 3<h1>
+                        <div class="ps-r">
+                          <img src="http://www.partylanes.co.uk/media/catalog/category/A-PF968.jpg" class="debug">
+                          <form class="ps-a left-s top-h debug" action="#">
+                            <input type="submit" value="자세히보기">
+                          </form>
+                          <form class="ps-a left-s top-l debug" action="https://coupang.com">
+                            <input type="submit" value="쿠팡홈으로">
+                          </form>
+                        </div>
+                        <div class="ps-r">
+                          <img src="http://www.partylanes.co.uk/media/catalog/category/A-PF968.jpg" class="debug">
+                          <form class="ps-a left-s top-h debug" action="#">
+                            <input type="submit" value="자세히보기">
+                          </form>
+                          <form class="ps-a left-s top-l debug" action="https://coupang.com">
+                            <input type="submit" value="쿠팡홈으로">
+                          </form>
+                        </div>
+                    </div>
+
                     <div class="menu-4 display-n">
-                      <ul class="fl-r list-n clearfix debug">
+                      <ul class="list-n clearfix gutters-t gutters-d debug ">
                         <li class="fl-l debug">
                           <form id="id" class="debug">
+
                             <li class="fl-l debug">Login
                             </li>
                             <input type="text" class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug">
-                            <input type="submit" value="submit">
+                            <input type="submit" value="가입완">
                           </form>
                         </li>
                       </ul>
