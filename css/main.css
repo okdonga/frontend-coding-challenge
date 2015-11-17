@@ -64,31 +64,14 @@ h3, h5, p, ul, ol {
     -webkit-padding-start: 0px;
 }
 
-.debug {
-    border: 1px solid red;
-}
-
-/*
-EXAMPLES OF CLASS NAME
-.p-xxs
-.p-xs
-.p-sm
-.p-std
-.p-lg
-.p-xl
-.p-xxl
-*/
-
-.p-xs { padding: 0.4em; }
-.p-sm { padding: 1em; }
-.p-xxl { padding: 10em; }
-.p-r { padding-right: 12px; }
-.p-b { padding-bottom: 12px; }
-.p-sb { padding-bottom: 1em; }
 
 /*
     COLOR
 */
+
+.debug {
+    border: 1px solid red;
+}
 
 .bgc-cool { background-color: blue; }
 .bgc-light-g { background-color: #999; }
@@ -104,13 +87,24 @@ EXAMPLES OF CLASS NAME
     color: blue;
 }
 
-.fz-xxl { font-size: 16em; }
+.current {
+    background-color: blue;
+}
 
-.fl-l { float: left; }
-.fl-r { float: right; }
+/*
+    PADDING
+*/
+.p-xs { padding: 0.4em; }
+.p-sm { padding: 1em; }
+.p-xxl { padding: 10em; }
+.p-r { padding-right: 12px; }
+.p-b { padding-bottom: 12px; }
+.p-sb { padding-bottom: 1em; }
 
-.list-n { list-style: none; }
 
+/*
+    BORDER
+*/
 .bdrds-lg { border-radius: 16px; }
 
 .bds-1 { border-width: 1px; }
@@ -121,14 +115,20 @@ EXAMPLES OF CLASS NAME
     width: 50px;
 }
 
-.current {
-    background-color: blue;
-}
+.fz-xxl { font-size: 16em; }
+
+.fl-l { float: left; }
+.fl-r { float: right; }
+
+.list-n { list-style: none; }
 
 .display-n {
     display: none;
 }
 
+/*
+    IMAGE SIZE
+*/
 .img-xxl {
     width: 680px;
     height: 300px;
@@ -173,6 +173,9 @@ EXAMPLES OF CLASS NAME
     width: 516px;
 }
 
+/*
+    POSITION
+*/
 .ps-r { position: relative; }
 .ps-a { position: absolute; }
 
