@@ -4,7 +4,7 @@ $(document).ready(function() {
   var randomNo = Math.floor(Math.random() * (5) + 1);
   var contentName = 'menu-' + randomNo;
   var className = 'menu-' + randomNo + '-tab';
-
+  displayThree();
   $("." + className).parent().addClass("selected");
   ($("." + contentName)).show();
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
   // on click, generate corresponding tab content
   $('nav>ul>li>a').click(function(event) {
     event.preventDefault();
-    // displayThree();
+
     $('section>div').css('display', 'none');
     $('nav>ul>li').removeClass('selected');
     var selectedContent = $(this).attr('href');
@@ -59,17 +59,7 @@ $(document).ready(function() {
   // ** MENU 3 ** // make this into a function
 
   // hide everything
-  // function displayThree() {
-  //   var threadTotal = $('.deck>ul>li');
-  //   threadTotal.css('display', 'none');
-  //   console.log(threadTotal);
-  //   var threadOne = threadTotal.slice(0,3);
-  //   var threadTwo = threadTotal.slice(3,6);
-  //   var threadThree = threadTotal.slice(5,8);
-  //   // show always only three by default
 
-  //   var currentImg = $('.deck-top').children().prop('src');
-  //   var currentDeck = $('.deck').find('img[src$="' + currentImg + '"]').parent();
   //   // console.log(currentDeck)
   //   // console.log(threadTotal.indexOf(currentDeck));
 
@@ -84,62 +74,67 @@ $(document).ready(function() {
   //   // $(currentDeck).show();
   //   // $(leftDeck).show();
   //   // $(rightDeck).show();
-  // }
+
 
 
   // on click, display enlarged image
   $('.deck>ul>li').click(function() {
-    // displayThree();
+
     // console.log(this);
     // $(this).children().addClass('current');
     var selectedImg = $(this).children().clone();
     $('.deck-top').children().replaceWith(selectedImg);
-    $('.deck-top').children().removeClass("img-s").addClass("img-l");
+    $('.deck-top').children().removeClass("img-xxs").addClass("img-xxl");
     // $('.arrow-l').show();
     // if its the last item hide, else show
     var currentImg = $('.deck-top').children().prop('src');
     // console.log(currentImg);
     if (currentImg == $('.deck>ul>li:nth-child(1)').children().prop('src')) {
-      $('.arrow-l').hide();
+      $('.arrow-l').css('visibility', 'hidden');
     } else {
-      $('.arrow-l').show();
+      $('.arrow-l').css('visibility', 'visible');
     }
     if (currentImg == $('.deck>ul>li:nth-child(8)').children().prop('src')) {
-      $('.arrow-r').hide();
+      $('.arrow-r').css('visibility', 'hidden');
     } else {
-      $('.arrow-r').show();
+      $('.arrow-r').css('visibility', 'visible');
     }
+    displayThree();
   });
 
+  // displayThree();
+
   $('.arrow-l').click(function() {
-    // displayThree();
-    $('.arrow-r').show();
+
+    $('.arrow-r').css('visibility', 'visible');
     var currentImg = $('.deck-top').children().prop('src');
     var prevDeck = $('.deck').find('img[src$="' + currentImg + '"]').parent().prev();
     var prevImg = prevDeck.children().clone();
     $('.deck-top').children().replaceWith(prevImg);
-    $('.deck-top').children().removeClass("img-s").addClass("img-l");
+    $('.deck-top').children().removeClass("img-xxs").addClass("img-xxl");
     if (currentImg == $('.deck>ul>li:nth-child(2)').children().prop('src')) {
-      $('.arrow-l').hide();
+      $('.arrow-l').css('visibility', 'hidden');
     }
+    displayThree();
   });
 
   $('.arrow-r').click(arrowRightClick);
 })
 
 var arrowRightClick = function(event) {
-    // displayThree();
-    // var target = event.target;
-    // if target.parent().attr('class') ==
-    $('.arrow-l').show();
-    var currentImg = $('.deck-top').children().prop('src');
-    var prevDeck = $('.deck').find('img[src$="' + currentImg + '"]').parent().next();
-    var prevImg = prevDeck.children().clone();
-    $('.deck-top').children().replaceWith(prevImg);
-    $('.deck-top').children().removeClass("img-s").addClass("img-l");
-    if (currentImg == $('.deck>ul>li:nth-child(7)').children().prop('src')) {
-      $('.arrow-r').hide();
-    }
+
+  // var target = event.target;
+  // if target.parent().attr('class') ==
+  $('.arrow-l').css('visibility', 'visible');
+  var currentImg = $('.deck-top').children().prop('src');
+  var prevDeck = $('.deck').find('img[src$="' + currentImg + '"]').parent().next();
+  var prevImg = prevDeck.children().clone();
+  $('.deck-top').children().replaceWith(prevImg);
+  $('.deck-top').children().removeClass("img-xxs").addClass("img-xxl");
+  if (currentImg == $('.deck>ul>li:nth-child(7)').children().prop('src')) {
+    $('.arrow-r').css('visibility', 'hidden');
+  }
+  displayThree();
 }
 
 var checkForm = function(form) {
@@ -147,3 +142,24 @@ var checkForm = function(form) {
     alert('not ready');
   }
 }
+
+var displayThree = function() {
+  var threadTotal = $('.deck>ul>li');
+  threadTotal.css('display', 'none');
+  var threadOne = threadTotal.slice(0,3);
+  var threadTwo = threadTotal.slice(3,6);
+  var threadThree = threadTotal.slice(5,8);
+  var currentImg = $('.deck-top').children().prop('src');
+  console.log(currentImg);
+  var currentDeck = $('.deck').find('img[src$="' + currentImg + '"]').parent();
+  var id = (currentDeck.attr('id'));
+  console.log(id);
+  if (id == 'one' || id == "two" || id == "three") {
+    threadOne.show();
+  } else if (id == "four" || id == "five" || id == "six") {
+    threadTwo.show();
+  } else {
+    threadThree.show();
+  }
+}
+
