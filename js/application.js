@@ -142,8 +142,8 @@ var arrowRightClick = function(event) {
     }
 }
 
-// var checkForm = function(form) {
-//   if (form.username.value == " ") {
-//     alert
-//   }
-// }
+var checkForm = function(form) {
+  if (form.password.value == " ") {
+    alert('not ready');
+  }
+}
