@@ -189,17 +189,35 @@
                   </div>
                   <div class="fl-l span-6-t p-sb clearfix">
                     <label for="phone" class="col span-5-t">Phone Number</label>
-                    <input type="tel" name="phone" required pattern="\d{4}\d{4}" class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug">
+                    <select class="fl-l p-xs clearfix debug">
+                      <option value="010">010</option>
+                      <option value="011">011</option>
+                      <option value="016">016</option>
+                      <option value="000">000</option>
+                    </select>
+                    <p class="fl-l p-xs debug">-</p>
+                    <input type="mid-tel" name="phone" required pattern="\d{4}\d{4}" class="fl-l bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg span-2-t debug">
+                    <p class="fl-l p-xs debug">-</p>
+                    <input type="fin-tel" name="phone" required pattern="\d{4}\d{4}" class="fl-l bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg span-2-t debug">
                   </div>
                   <div class="fl-l span-6-t p-sb">
-                    <label for="id" class="col span-5-t">Sex</label>
-                    <input type="text" name="email" required  class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug">
+                    <label for="email" class="col span-5-t">Sex</label>
+
+                    <input type="checkbox" name="female" value="female" required  class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug" class="fl-l">Female
+
+                    <input type="checkbox" name="male" value="male" required  class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug" class="fl-l">Male
                   </div>
                   <div class="fl-l span-6-t p-sb clearfix">
-                    <label for="id" class="col span-5-t">Terms and Conditions</label>
-                    <input type="text" name="email" required  class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug">
+                    <label for="agreement" class="col span-5-t">Terms and Conditions</label>
+
+
+                    <input type="checkbox" name="terms" value="agree" required  class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug">Agree
+
+                    <input type="checkbox" name="terms" value="disagree" required  class="bds-1 bds-slid bdc-fog bgc-bone p-xs bdrds-lg debug">Not Agree
+
+
                   </div>
-                  <div class="p-sm">
+                  <div class="col p-sm">
                     <input type="submit" value="가입완료" class="">
                   </div>
                 </form>
