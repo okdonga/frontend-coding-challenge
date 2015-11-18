@@ -45,6 +45,7 @@ $(document).ready(function() {
 })
 
 
+
   /*
    *  1. Toggle Feature : On toggle, change page layout
    */
@@ -192,19 +193,4 @@ $(document).ready(function() {
       if (!isChecked) {
         alert('Please select your gender.');
      }
-    }
-
-
-    var checkForm = function(form) {
-      if (form.password.value == " ") {
-        alert('not ready');
-      }
-    }
-
-    var agmtValidation = function(event) {
-      var isChecked = $("#agmt>input[type=checkbox]:checked").length;
-      if (!isChecked) {
-        alert('Please indicate that you accept the Terms and Conditions.');
-        return false
-      }
     }
