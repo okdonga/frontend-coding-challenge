@@ -1,5 +1,4 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
-/* this is where you write css */
 html {
     color: #222;
     font-size: 1em;
@@ -53,7 +52,7 @@ textarea {
 
 
 /* ==========================================================================
-   Author's custom styles
+    custom styles
    ========================================================================== */
 
 h3, h5, p, ul, ol {
@@ -64,16 +63,29 @@ h3, h5, p, ul, ol {
     -webkit-padding-start: 0px;
 }
 
+/*@font-face {
+     font-family: Dotum;
+     src: url('Dotum.ttc') format('truetype');
+}*/
 
 body {
-    font-family: "돋움", "Dotum", tahoma;
+    font-family: "돋움", "Dotum";
 }
+
+:lang(en) {
+    font-family: 'Tahoma';
+}
+
+
+/*:lang(kr) {
+    font-family: "돋움", "Dotum", "Tahoma";
+}*/
 
 /*
     COLOR
 */
 .debug {
-    border: 1px solid red;
+    /*outline: 1px solid red;*/
 }
 
 .bgc-cool { background-color: blue; }
@@ -105,6 +117,7 @@ body {
     PADDING
 */
 .p-xs { padding: 0.4em; }
+.p-ms { padding: 0.5em; }
 .p-s { padding: .8em; }
 .p-sm { padding: 1em; }
 .p-xxl { padding: 10em; }
@@ -194,7 +207,10 @@ body {
 .top-h { top: 100px;}
 .top-l { top: 150px;}
 
-
+/*
+    FONT-SIZE
+*/
+.f-s { font-size: .9em; }
 
 /* ==========================================================================
    Media Queries
